@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        
+        stage('Ping') {
+            steps {
+                bat 'ping www.google.com'
+            }
+        }        
+        
+        stage('Bye') {
+            steps {
+                echo 'Bye World'
+            }
+        }
+    }
+}
